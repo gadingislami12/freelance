@@ -370,3 +370,88 @@ textarea:focus {
         /* In a full build, add a hamburger menu here */
     }
 }
+
+/* Pricing Section */
+.pricing-grid {
+    align-items: center;
+    /* This centers the cards so the middle one can pop out */
+}
+
+.pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Make the middle card stand out */
+.pricing-card.popular {
+    border-color: var(--primary);
+    background: var(--bg-alt);
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 20px 0;
+    color: white;
+}
+
+.price span {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    display: block;
+    margin-bottom: -5px;
+}
+
+.features {
+    list-style: none;
+    margin: 24px 0;
+    flex-grow: 1;
+    /* Pushes the button to the bottom */
+}
+
+.features li {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Custom Checkmark for the list */
+.features li::before {
+    content: '✓';
+    color: var(--primary);
+    font-weight: 900;
+}
+
+.tier-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
